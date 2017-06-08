@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    <style type="text/css" media="screen">
+    	*{margin: 0;padding: 0;}
+        /*树叶*/
+    	.box{
+    		width: 800px;
+    		height: 300px;
+    		border: 1px solid #999;
+    		margin: 10px auto;
+            position: relative;
+    	}
+    	.big{
+    		width: 238px;
+    		height: 151px;
+    		background: url(page.png) no-repeat;
+            margin: 100px auto;
+    	}
+        .small{
+            width: 90px;
+            height: 65px;
+            background: url(page.png) no-repeat 0 -150px;
+            position: absolute;
+            top: 20px;
+            left: 250px;
+            animation: piao 3s linear infinite;
+        }
+        /*动画效果第二种是form  to写法*/
+ /*       @-webkit-keyframes piao{
+            form {
+                top: 20px;
+            }
+            to{
+                top: 250px;
+                opacity: 0;
+            }
+        }*/
+        /*动画效果第一种是百分比写法*/
+        @-webkit-keyframes piao{
+            0% {
+                top: 20px;
+                left: 280px;
+            }
+            50% {
+                top: 150px;
+                right: 150px;
+                opacity: 0.5;
+            }
+            100% {
+                top: 250px;
+                left: 220px;
+                opacity: 0;
+            }
+        }
+        /*尺子*/
+        .box1{
+            width: 800px;
+            height: 300px;
+            border: 1px solid #999;
+            margin: 10px auto;
+            position: relative;
+        }
+        .delta{
+            width: 170px;
+            height: 170px;
+            background: url(page.png) no-repeat 0 -311px;
+            position:absolute;
+            top: 50px;
+            left: 210px;
+            animation: zhuan 3s linear infinite;
+
+        }
+        .round{
+            width: 137px;
+            height: 136px;
+            background: url(page.png) no-repeat 0 -482px;
+            position:absolute;
+            top: 50px;
+            left: 310px;
+            animation: zhuan 3.5s linear infinite;
+        }
+        .square{
+            width: 96px;
+            height: 96px;
+            background: url(page.png) no-repeat 0 -215px;
+            position:absolute;
+            top: 120px;
+            left: 380px;
+            animation: zhuan 3.8s linear infinite;
+        }
+        @-webkit-keyframes zhuan{
+            0% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(360deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+            /*灯泡*/
+        .box2{
+            width: 800px;
+            height: 500px;
+            border: 1px solid #999;
+            margin: 10px auto;
+            position: relative;
+        }
+        .bulb{
+            width: 191px;
+            height: 267px;
+            background: url(page.png) no-repeat 0 -620px;
+            position: absolute;
+            top: 120px;
+            left: 200px;
+        }
+        .ray{
+            width: 341px;
+            height: 256px;
+            opacity: 0;
+            background: url(page.png) no-repeat 0 -887px;
+            position: absolute;
+            top: 25px;
+            left: 120px;
+            animation: faguang 0.1s linear infinite alternate;
+        }
+        @-webkit-keyframes faguang{
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        /*飞机*/
+        .box3{
+            width: 800px;
+            height: 500px;
+            border: 1px solid #999;
+            margin: 10px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .plane{
+            width: 225px;
+            height: 220px;
+            background: url(page.png) no-repeat -239px 0 ;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            animation: feiji 0.3s linear infinite alternate;
+        }
+        @-webkit-keyframes feiji{
+            0% {
+                top:50px;
+            }
+            100% {
+                top:80px;
+            }
+        }
+        .string{
+            width: 75px;
+            height: 75px;
+            background: url(page.png) no-repeat -164px -150px ;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+
+            animation: xian 0.3s linear infinite ;
+        }
+        .string1{
+            width: 155px;
+            height: 155px;
+            background: url(page.png) no-repeat -240px -220px ;
+            position: absolute;
+            top: 0px;
+            left: 100px;
+            animation: xian1 0.3s linear infinite ;
+        }
+        .string2{
+            width: 94px;
+            height: 94px;
+            background: url(page.png) no-repeat -397px -219px ;
+            position: absolute;
+            top: 330px;
+            left: 100px;
+            animation: xian2 0.3s linear infinite ;
+        }
+        .string3{
+            width: 155px;
+            height: 155px;
+            background: url(page.png) no-repeat -239px -373px ;
+            position: absolute;
+            top: 300px;
+            left: 100px;
+            animation: xian3 0.3s linear infinite;
+        }
+        @-webkit-keyframes xian{
+            0% {
+                left:-75px;
+                top: 277px;
+            }
+
+            100% {
+                left:234px;
+                top: -75px;
+                opacity:0;
+            }
+        }
+        @-webkit-keyframes xian1{
+            0% {
+                left:-75px;
+                top: 277px;
+            }
+
+            100% {
+                left:234px;
+                top: -75px;
+                opacity:0;
+            }
+        }
+        @-webkit-keyframes xian2{
+            0% {
+                left:-75px;
+                top: 277px;
+            }
+
+            100% {
+                left:234px;
+                top: -75px;
+                opacity:0;
+            }
+        }
+        @-webkit-keyframes xian3{
+            0% {
+                left:-75px;
+                top: 277px;
+            }
+
+            100% {
+                left:234px;
+                top: -75px;
+                opacity:0;
+            }
+        }
+    </style>
+    <!-- 树叶 -->
+    <div class="box">
+    	<div class="big"></div>
+    	<div class="small"></div>
+    </div>
+    <!-- 尺子 -->
+    <div class="box1">
+        <div class="round"></div>
+        <div class="square"></div>
+        <div class="delta"></div>
+    </div>
+    <!-- 灯泡 -->
+    <div class="box2">
+        <div class="bulb"></div>
+        <div class="ray"></div>
+    </div>
+    <!-- 飞机 -->
+    <div class="box3">
+        <div class="plane"></div>
+        <div class="string"></div>
+        <div class="string1"></div>
+        <div class="string2"></div>
+        <div class="string3"></div>
+    </div>
+    </body>
+</html>
